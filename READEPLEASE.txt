@@ -1,0 +1,4 @@
+1. Import file data_karyawan.sql to mySQL database
+2. Run project to your pavorite IDE
+3. Setting pass or user to application properties if you have a password or user
+4. enjooy
