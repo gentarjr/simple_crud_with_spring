@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<center>
+		<h2>INPUT KARYAWAN</h2>
+	</center>
+	<hr></hr>
+	<center>
+		<form th:action="@{/index/create}" method="post"
+			th:object="${employee}">
+			<table>
+				<tr>
+					<td></td>
+					<td><input type="hidden" th:field="*{id}"></td>
+				</tr>
+				<tr>
+					<td>NIK</td>
+					<td><input type="text" th:field="*{nik_karyawan}"></td>
+				</tr>
+				<tr>
+					<td>NAMA</td>
+					<td><input type="text" th:field="*{nama_karyawan}"></td>
+				</tr>
+				<tr>
+					<td>DIVISI</td>
+					<td><select th:field="*{divisi_karyawan}">
+							<option value="IT">IT</option>
+							<option value="INFRASTRUCTURE">INFRASTRUCTURE</option>
+							<option value="OPERATION">OPERATION</option>
+							<option value="QC">QC</option>
+					</select></td>
+				</tr>
+
+				<tr>
+					<td>
+						<button type="submit">Simpan</button>
+					</td>
+					<td><a th:href="@{/index}">Back</a></td>
+				</tr>
+
+			</table>
+		</form>
+	</center>
+</body>
+</html>
